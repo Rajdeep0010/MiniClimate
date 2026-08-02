@@ -1,0 +1,9 @@
+Pretraining,Architecture,Steps,Docs,Storage,F1
+MiniLM-base,"MiniLM-L12-H384 (33M params, 12L, d=384)",-,-,-,65.78±1.4
+TAPT-MiniLM,"MiniLM-L12-H384 (33M params, 12L, d=384)",5.2K,1.7K,100KB,66.96±3.1
+DAPT-MiniLM,"MiniLM-L12-H384 (33M params, 12L, d=384)",260.2K,43.8K,3.9MB,67.97±2.3
+DAPT+TAPT-MiniLM,"MiniLM-L12-H384 (33M params, 12L, d=384)",265.4K,45.5K,4.0MB,69.69±1.7
+SciBERT,"BERT-base (110M params, 12L, d=768)",~1.0M,1.14M,3.17GB,61.89±2.3
+ClimateBERT,"DistilRoBERTa (82M params, 6L, d=768)",~100K,~2.0M,~1.0GB,71.72±2.4
+DistilBERT,"DistilBERT-base (66M params, 6L, d=768)",~500K,~16GB,16.0GB,66.40±1.7
+RoBERTa,"RoBERTa-base (125M params, 12L, d=768)",500K,~160GB,160GB,71.82±2.2

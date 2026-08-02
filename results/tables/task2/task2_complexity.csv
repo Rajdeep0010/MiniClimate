@@ -1,0 +1,4 @@
+Strategy,Time Complexity,Space Complexity,Est. Steps,Relative Cost,Drive (MB)
+DAPT,O(E·S·L·(n²d+nd²)),O(Ld² + Bn²hL),"260,205",1.00×,~132
+TAPT,O(E·S·L·(n²d+nd²)),O(Ld² + Bn²hL),"123,250",0.47×,~132
+DAPT+TAPT,O((E₁+E₂)·S·L·(n²d+nd²)),O(Ld² + Bn²hL),"383,455",1.47×,~132

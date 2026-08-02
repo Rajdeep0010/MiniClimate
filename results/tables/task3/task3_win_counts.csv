@@ -1,0 +1,9 @@
+Model,Wins_p<0.05,Wins_Bonferroni,Win_Rate_%
+DistilBERT,4,1,14.3
+SciBERT,2,0,7.1
+ClimateBERT,1,0,3.6
+DAPT-MiniLM,0,0,0.0
+MiniLM-base,0,0,0.0
+DAPT+TAPT-MiniLM,0,0,0.0
+TAPT-MiniLM,0,0,0.0
+RoBERTa,0,0,0.0

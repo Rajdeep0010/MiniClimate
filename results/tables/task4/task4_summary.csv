@@ -1,0 +1,9 @@
+Model,f1_mean_%,f1_std,precision_mean_%,recall_mean_%,accuracy_mean_%,Rank,Note
+DistilBERT,79.79,0.0314,81.03,79.58,82.08,1,BEST
+DAPT+TAPT-MiniLM,79.24,0.0376,82.65,77.64,81.67,2,2nd
+SciBERT,76.39,0.0367,77.89,77.64,78.75,3,
+MiniLM-base,74.59,0.0392,82.72,71.94,77.92,4,
+TAPT-MiniLM,73.93,0.0418,79.72,71.94,77.5,5,
+RoBERTa,72.2,0.0594,77.61,72.22,75.83,6,
+DAPT-MiniLM,71.34,0.1145,73.6,70.83,77.5,7,
+ClimateBERT,71.06,0.0403,74.25,70.28,73.33,8,

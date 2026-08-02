@@ -1,0 +1,9 @@
+Pretraining,Steps,Docs,Storage,F1
+MiniLM-base,-,-,-,53.93±4.4
+TAPT,1.1K,901,100KB,55.75±2.5
+DAPT,12.5K,43.8K,3.9MB,57.35±2.1
+DAPT + TAPT,13.6K,44.7K,4.0MB,56.08±4.6
+SciBERT,External,External,External,60.82±1.5
+ClimateBERT,External,External,External,60.04±3.1
+DistilBERT,External,External,External,63.88±1.6
+RoBERTa,External,External,External,58.55±3.1
