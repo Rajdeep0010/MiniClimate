@@ -26,43 +26,40 @@ Furthermore, prior evaluations often rely on a narrow set of tasks and lack the 
 
 ---
 
-## Pretraining Data Preparation Pipeline
+## Pretraining Dataset Preprocessing Pipeline
 
 ```
-- - - - - - - -      - - - - - - - -      - - - - - - - -      - - - - - - - -
-: Raw Corpus   :      : Dataset      :      : Unicode      :      : Exact &     :
-: 76,455       : ---> : Loading &    : ---> : Repair       : ---> : Near-Dup     :
-: comments     :      : Schema Norm. :      :              :      : Removal      :
-: (Climate:    :      :              :      :              :      : (5,761 +     :
-: 59,290,      :      :              :      :              :      : 3,606)       :
-: Europe:      :      :              :      :              :      :              :
-: 14,519,      :      :              :      :              :      :              :
-: India: 2,646):      :              :      :              :      :              :
-- - - - - - - -      - - - - - - - -      - - - - - - - -      - - - - - - - -
-                                                                        |
-       .----------------------------------------------------------------
+- - - - - - - -    - - - - - - - -    - - - - - - - -    - - - - - - - -    - - - - - - - -
+: 1 - Dataset  :    : 2 - Unicode  :    : 3 - Exact    :    : 4 - Near-    :    : 5 - Fan /    :
+: Loading &    : -> : Repair       : -> : Duplicate    : -> : Duplicate    : -> : Spam         :
+: Schema       :    :              :    : Removal      :    : Removal      :    : Comment      :
+: Normalization:    :              :    : ------------ :    : ------------ :    : Removal      :
+:              :    :              :    : 5,761        :    : 3,606        :    : ------------ :
+:              :    :              :    : removed      :    : removed      :    : 1,483        :
+:              :    :              :    :              :    :              :    : removed      :
+- - - - - - - -    - - - - - - - -    - - - - - - - -    - - - - - - - -    - - - - - - - -
+                                                                                        |
+       .------------------------------------------------------------------------------
        |
        v
-- - - - - - - -      - - - - - - - -      - - - - - - - -      - - - - - - - -
-: Fan / Spam   :      : Noise        :      : Text         :      : Length &     :
-: Removal      : ---> : Filtering    : ---> : Cleaning &   : ---> : Quality      :
-: (1,483       :      : (16 noisy,   :      : Normalization:      : Filtering    :
-: removed)     :      : 30 empty)    :      :              :      : (10,457      :
-:              :      :              :      :              :      : short + 2    :
-:              :      :              :      :              :      : low-quality) :
-- - - - - - - -      - - - - - - - -      - - - - - - - -      - - - - - - - -
-                                                                        |
-       .----------------------------------------------------------------
-       |
-       v
-- - - - - - - -      - - - - - - - - - -      - - - - - - - - -      - - - - - - - -
-: Language     :      : Climate Relevance  :      : Cleaned         :      : Shuffled Split :
-: Detection    : ---> : Scoring            : ---> : Corpus          : ---> : (seed = 42)    :
-: (35 languages:      : (keyword tiers:    :      : 17,346 rows     :      : Train: 15,611  :
-: identified)  :      : high/med/low;      :      : 657,209 words   :      : Val: 868       :
-:              :      : 37,754 off-topic   :      : avg 37.9        :      : Test: 867      :
-:              :      : rows removed)      :      : words/row       :      :                :
-- - - - - - - -      - - - - - - - - - -      - - - - - - - - -      - - - - - - - -
+- - - - - - - -    - - - - - - - -    - - - - - - - -    - - - - - - - -    - - - - - - - -
+: 6 - Noise    :    : 7 - Text     :    : 8 - Length & :    : 9 - Language :    : 10 - Climate :
+: Filtering    : -> : Cleaning &   : -> : Quality      : -> : Detection    : -> : Relevance    :
+: ------------ :    : Normalization:    : Filtering    :    : ------------ :    : Scoring      :
+: 16 noisy     :    :              :    : ------------ :    : Enables      :    : ------------ :
+: comments     :    :              :    : 10,457 short :    : multilingual :    : 37,754       :
+: removed      :    :              :    : 2 low-quality:    : keyword      :    : off-topic    :
+:              :    :              :    : 30 empty     :    : matching     :    : comments     :
+:              :    :              :    :              :    :              :    : removed      :
+- - - - - - - -    - - - - - - - -    - - - - - - - -    - - - - - - - -    - - - - - - - -
+                                                                                        |
+                                                                                        v
+                                                                        - - - - - - - - - - - - -
+                                                                        : Final Corpus            :
+                                                                        : ----------------------- :
+                                                                        : 17,346 climate-relevant :
+                                                                        : rows retained           :
+                                                                        - - - - - - - - - - - - -
 ```
 
 ---
