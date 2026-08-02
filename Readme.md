@@ -3,10 +3,14 @@
 ---
 
 **Author:** Rajdeep Bose (University Roll No: 23478124026)
+
 **Guide:** Dr. Moumita Basu
+
 **Institution:** NSHM Knowledge Campus, Kolkata — M.Sc. Data Science & Analytics (2024–2026)
+
 **University:** Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal
 
+---
 ## Overview
 
 **MiniClimate** investigates whether a lightweight **MiniLM** model can be adapted to the climate domain through **Domain-Adaptive Pretraining (DAPT)**, **Task-Adaptive Pretraining (TAPT)**, and their combination (**DAPT+TAPT**) — using a pretraining corpus built entirely from informal, user-generated climate-related YouTube comments.
