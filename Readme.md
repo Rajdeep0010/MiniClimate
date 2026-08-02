@@ -13,7 +13,7 @@
 ---
 ## Overview
 
-**MiniClimate** investigates whether a lightweight **MiniLM** model can be adapted to the climate domain through **Domain-Adaptive Pretraining (DAPT)**, **Task-Adaptive Pretraining (TAPT)**, and their combination (**DAPT+TAPT**) — using a pretraining corpus built entirely from informal, user-generated climate-related YouTube comments.
+**MiniClimate** investigates whether a lightweight **MiniLM** model can be adapted to the climate domain through **Domain-Adaptive Pretraining (DAPT)**, **Task-Adaptive Pretraining (TAPT)**, and their combination (**DAPT+TAPT**) — using a pretraining corpus built entirely from informal, user-generated climate-related texts.
 
 The adaptively pretrained models are fine-tuned and evaluated on four diverse climate NLP tasks, and benchmarked against MiniLM-base, ClimateBERT, SciBERT, RoBERTa, and DistilBERT using a rigorous multi-seed statistical framework (mean, standard deviation, paired t-tests, Bonferroni correction).
 
