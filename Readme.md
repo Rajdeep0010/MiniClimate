@@ -25,7 +25,32 @@ Furthermore, prior evaluations often rely on a narrow set of tasks and lack the 
 - All MiniLM variants underperformed on the informal, tweet-based stance detection task (Task 3), indicating adaptive pretraining benefits are not uniform across all task types.
 
 ---
+**Model on Hugging Face Hub:** [https://huggingface.co/Raj7722/MiniClimate](https://huggingface.co/Raj7722/MiniClimate)
 
+---
+## How to Use
+
+The pretrained MiniClimate checkpoint is hosted on Hugging Face Hub and can be loaded directly:
+
+```notebook-python
+from transformers import AutoTokenizer, AutoModelForMaskedLM
+
+tokenizer = AutoTokenizer.from_pretrained("Raj7722/MiniClimate")
+model = AutoModelForMaskedLM.from_pretrained("Raj7722/MiniClimate")
+```
+
+> This is a **pretrained (MLM) checkpoint**, adapted to climate-domain text via DAPT+TAPT. To use it for a downstream classification task (e.g., stance detection, claim detection, sentiment classification), attach a classification head and fine-tune it on your labeled dataset, following the same protocol described in Section 3.6 of the project report.
+
+### Quick fill-mask test
+
+```notebook-python
+from transformers import pipeline
+
+fill_mask = pipeline("fill-mask", model=model, tokenizer=tokenizer)
+fill_mask("Global warming is caused by [MASK] gas emissions.")
+```
+
+---
 ## Pretraining Dataset Preprocessing Pipeline
 
 ```
