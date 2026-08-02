@@ -1,5 +1,12 @@
 # MiniClimate: Domain-Adaptive and Task-Adaptive Pretrained Model for Climate-Related NLP Tasks
 
+---
+
+**Author:** Rajdeep Bose (University Roll No: 23478124026)
+**Guide:** Dr. Moumita Basu
+**Institution:** NSHM Knowledge Campus, Kolkata — M.Sc. Data Science & Analytics (2024–2026)
+**University:** Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal
+
 ## Overview
 
 **MiniClimate** investigates whether a lightweight **MiniLM** model can be adapted to the climate domain through **Domain-Adaptive Pretraining (DAPT)**, **Task-Adaptive Pretraining (TAPT)**, and their combination (**DAPT+TAPT**) — using a pretraining corpus built entirely from informal, user-generated climate-related YouTube comments.
@@ -7,12 +14,7 @@
 The adaptively pretrained models are fine-tuned and evaluated on four diverse climate NLP tasks, and benchmarked against MiniLM-base, ClimateBERT, SciBERT, RoBERTa, and DistilBERT using a rigorous multi-seed statistical framework (mean, standard deviation, paired t-tests, Bonferroni correction).
 
 The final, best-performing variant (DAPT+TAPT-MiniLM) is referred to throughout as **MiniClimate**.
----
 
-**Author:** Rajdeep Bose
-**Guide:** Dr. Moumita Basu
-**Institution:** NSHM Knowledge Campus, Kolkata — M.Sc. Data Science & Analytics (2024–2026)
-**University:** Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal
 
 ## Problem Statement
 
