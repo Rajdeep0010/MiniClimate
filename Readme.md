@@ -2,7 +2,7 @@
 
 ---
 
-**Author:** Rajdeep Bose (University Roll No: 23478124026)
+**Author:** Rajdeep Bose 
 
 **Guide:** Dr. Moumita Basu
 
@@ -19,6 +19,7 @@ The adaptively pretrained models are fine-tuned and evaluated on four diverse cl
 
 The final, best-performing variant (DAPT+TAPT-MiniLM) is referred to throughout as **MiniClimate**.
 
+---
 
 ## Problem Statement
 
